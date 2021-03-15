@@ -7,20 +7,21 @@ import { getParks, useParks } from "../scripts/parks/ParkProvider.js";
 
 // Attraction Fetch ---------------------------------------------------------------------
 getAttractions()
-    .then(useAttractions())
-
-let attractionList = useAttractions();
-console.log("Attraction Test Fetch", attractionList);
+    .then(attractionArray => {
+        console.log("Attraction Test Fetch", attractionArray);
+    })
 
 // Eatery Fetch -------------------------------------------------------------------------
-getEateries();
-let eateryList = useEateries();
-console.log("Eatery Test Fetch", eateryList);
+getEateries()
+    .then(eateryArray => {
+        console.log("Eatery Test Fetch", eateryArray);
+    })
 
 // Park Fetch ---------------------------------------------------------------------------
-getParks();
-let parkList = useParks();
-console.log("Park Test Fetch", parkList);
+getParks()
+    .then(parksArray => {
+        console.log("Park Test Fetch", parksArray);
+    })
 
 // Weather Fetch ------------------------------------------------------------------------
 // getWeather(5, 5)
