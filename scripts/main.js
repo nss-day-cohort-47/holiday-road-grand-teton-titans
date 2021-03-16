@@ -22,7 +22,7 @@ attractionElement.addEventListener("change", (event) => {
 const eateryElement = document.querySelector("#eaterySelect");
 // An event listen that listens for a dropdown selection, then...
 eateryElement.addEventListener("change", (event) => {
-    // Assigns the array from the get function to a variable.
+    // Assigns the array from the use function to a variable.
     let eaterySelection = useEateries();
     // Loops through the array variable in order to...
     for (let anEatery of eaterySelection) {
