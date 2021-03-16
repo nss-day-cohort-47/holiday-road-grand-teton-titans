@@ -1,5 +1,5 @@
 import { getAttractions } from "./attractions/AttractionProvider.js";
-import { attractionList } from "./attractions/AttractionList.js";
+import { attractionList, bizarreList } from "./attractions/AttractionList.js";
 
 import { getEateries } from "./eateries/EateryProvider.js";
 import { eateryList } from "./eateries/EateryList.js";
