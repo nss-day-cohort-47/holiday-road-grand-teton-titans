@@ -8,6 +8,20 @@ import { displayEatery } from "./eateries/EateryPreview.js";
 import { getParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 
+const parkElement = document.querySelector("#parkSelect");
+parkElement.addEventListener("change", (event) => {
+    console.log(event.target.value);
+})
+const attractionElement = document.querySelector("#attractionSelect");
+attractionElement.addEventListener("change", (event) => {
+    console.log(event.target.value);
+})
+const eateryElement = document.querySelector("#eaterySelect");
+eateryElement.addEventListener("change", (event) => {
+    console.log(event.target.value);
+    // eateryDisplay(event.target.value)
+})
+
 const startItinerary = () => {
 
     getAttractions()
@@ -26,5 +40,11 @@ const startItinerary = () => {
         })
 
 }
-
 startItinerary();
+
+// const parkElement = document.querySelector("nav")
+// parkElement.addEventListener("change", (event) => {
+// 	if (event.target.id === "#parkOption") {
+// 		console.log(parkElement);
+// 	}
+// })
