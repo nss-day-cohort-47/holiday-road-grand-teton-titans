@@ -18,7 +18,7 @@ attractionElement.addEventListener("change", (event) => {
 const eateryElement = document.querySelector("#eaterySelect");
 eateryElement.addEventListener("change", (event) => {
     console.log(event.target.value);
-    eateryDisplay(event.target.value)
+    // eateryDisplay(event.target.value)
 })
 
 const startItinerary = () => {
