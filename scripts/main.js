@@ -18,8 +18,9 @@ attractionElement.addEventListener("change", (event) => {
 })
 const eateryElement = document.querySelector("#eaterySelect");
 eateryElement.addEventListener("change", (event) => {
+    debugger
     console.log(event.target.value);
-    // eateryDisplay(event.target.value)
+    displayEatery(event.target.value)
 })
 
 const startItinerary = () => {
@@ -41,10 +42,3 @@ const startItinerary = () => {
 
 }
 startItinerary();
-
-// const parkElement = document.querySelector("nav")
-// parkElement.addEventListener("change", (event) => {
-// 	if (event.target.id === "#parkOption") {
-// 		console.log(parkElement);
-// 	}
-// })
