@@ -21,8 +21,8 @@ Please describe the tests required to verify your changes. Provide instructions 
 
 # Checklist:
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
+- [x] My code follows the style guidelines of this project
+- [x] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] My changes generate no new warnings or errors
+- [x] My changes generate no new warnings or errors
 - [ ] I have added test instructions that prove my fix is effective or that my feature works
