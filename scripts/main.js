@@ -7,20 +7,36 @@ import { displayEatery } from "./eateries/EateryPreview.js";
 
 import { getParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
+import { displayPark } from "./parks/ParkPreview.js"
 
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
     console.log(event.target.value);
+
+    displayPark(event.target.value)
 })
+
 const attractionElement = document.querySelector("#attractionSelect");
 attractionElement.addEventListener("change", (event) => {
     console.log(event.target.value);
 })
+
 const eateryElement = document.querySelector("#eaterySelect");
 eateryElement.addEventListener("change", (event) => {
     console.log(event.target.value);
     // eateryDisplay(event.target.value)
 })
+
+
+
+
+
+
+
+
+
+
+
 
 const startItinerary = () => {
 
