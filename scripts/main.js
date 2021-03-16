@@ -1,7 +1,7 @@
-import { getAttractions } from "./attractions/AttractionProvider.js";
+import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { attractionList, bizarreList } from "./attractions/AttractionList.js";
 
-import { getEateries } from "./eateries/EateryProvider.js";
+import { getEateries, useEateries } from "./eateries/EateryProvider.js";
 import { eateryList } from "./eateries/EateryList.js";
 import { displayEatery } from "./eateries/EateryPreview.js";
 
@@ -15,12 +15,16 @@ parkElement.addEventListener("change", (event) => {
 const attractionElement = document.querySelector("#attractionSelect");
 attractionElement.addEventListener("change", (event) => {
     console.log(event.target.value);
+    
 })
 const eateryElement = document.querySelector("#eaterySelect");
 eateryElement.addEventListener("change", (event) => {
     console.log(event.target.value);
-    // eateryDisplay(event.target.value)
+    debugger
+
+    // displayEatery(event.target.value)
 })
+//!businesss name includes name of business 
 
 const startItinerary = () => {
 
