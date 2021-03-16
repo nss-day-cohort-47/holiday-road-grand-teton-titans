@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Holiday Road</title>
 </head>
 <body>
     <nav>
-        <select name="parkSelect" id="parkSelect">
-            <!-- ! PARKS OPTION ELEMENTS FROM DOM PRINTER -->
-        </select>
-        <select name="attractionSelect" id="attractionSelect">
-            <!-- ! ATTRACTION OPTION ELEMENTS FROM DOM PRINTER -->
-        </select>
-        <select name="eaterySelect" id="eaterySelect">
-            <!-- ! EATERY OPTION ELEMENTS FROM DOM PRINTER -->
-        </select>
+        <div> <!--Div placed here for possible class needed for navbar css styling-->
+            <label for="parkSelect">Select a National Park</label><br>
+            <select name="parkSelect" id="parkSelect">
+                <!-- ! PARKS OPTION ELEMENTS FROM DOM PRINTER -->
+            </select>
+        </div>
+
+        <div>
+            <label for="attractionSelect">Select an attraction</label><br>
+            <select name="attractionSelect" id="attractionSelect">
+                <!-- ! ATTRACTION OPTION ELEMENTS FROM DOM PRINTER -->
+            </select>
+        </div>
+
+        <div>
+            <label for="eaterySelect">Select an Eatery</label><br>
+            <select name="eaterySelect" id="eaterySelect">
+                <!-- ! EATERY OPTION ELEMENTS FROM DOM PRINTER -->
+            </select>
+        </div>
+
     </nav>
+
     <main>
-        <!-- ! INSERT CARDS DOM PRINTER -->
-        <div class="parkCard"></div>
-        <div class="attractionCard"></div>
-        <div class="eateryCard"></div>
+        <div>
+
+            <h1>Itinerary preview</h2>
+            <!-- ! INSERT CARDS DOM PRINTER -->
+            <div class="parkCard"></div>
+            <div class="attractionCard"></div>
+            <div class="eateryCard"></div>
+
+        </div>
     </main>
+
     <footer>
         <!-- ! FOOTER -->
     </footer>
