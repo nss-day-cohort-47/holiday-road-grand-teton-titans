@@ -7,10 +7,13 @@ import { displayEatery } from "./eateries/EateryPreview.js";
 
 import { getParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
+import { displayPark } from "./parks/ParkPreview.js"
 
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
     console.log(event.target.value);
+
+    displayPark(event.target.value)
 })
 
 const attractionElement = document.querySelector("#attractionSelect");
@@ -33,6 +36,17 @@ eateryElement.addEventListener("change", (event) => {
         }
     }
 })
+
+
+
+
+
+
+
+
+
+
+
 
 const startItinerary = () => {
 
