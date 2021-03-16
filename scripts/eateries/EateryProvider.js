@@ -1,7 +1,7 @@
 let parsedEateries = [];
 
 export const useEateries = () => {
-    return parsedEateries;
+    return [...parsedEateries];
 }
 
 export const getEateries = () => {
