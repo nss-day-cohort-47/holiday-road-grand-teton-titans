@@ -1,9 +1,12 @@
+// An initial empty array.
 let parsedAttractions = [];
 
+// An exported function that returns the array.
 export const useAttractions = () => {
-    return parsedAttractions;
-}
+    return [...parsedAttractions];
+};
 
+// An exported function that fetches the data.
 export const getAttractions = () => {
     return fetch("http://holidayroad.nss.team/bizarreries")
         .then(response => response.json())
@@ -11,4 +14,4 @@ export const getAttractions = () => {
             parsedAttractions = parsedResponse;
             return parsedResponse;
         })
-}
+};
