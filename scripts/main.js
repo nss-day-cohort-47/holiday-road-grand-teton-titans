@@ -10,13 +10,19 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
+import { getWeather } from "./weather/WeatherProvider.js"
+import { displayWeather } from "./weather/displayWeather.js";
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
     let parkSelection = useParks();
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
+            debugger
             displayPark(aPark)
+            //! WORKING ON THIS
+            //? Weather Search
+            getWeather(aPark.latitude, aPark.longitude);
         }
     }
 })
@@ -37,7 +43,6 @@ attractionElement.addEventListener("change", (event) => {
 const eateryElement = document.querySelector("#eaterySelect");
 // An event listen that listens for a dropdown selection, then...
 eateryElement.addEventListener("change", (event) => {
-    debugger
     // Assigns the array from the use function to a variable.
     let eaterySelection = useEateries();
     // Loops through the array variable in order to...
@@ -89,6 +94,11 @@ const startItinerary = () => {
         .then(parksArray => {
             parkList(parksArray.data);
         })
+
+    // getWeather()
+    //     .then(weatherArray => {
+    //         weatherList(weatherArray)
+    //     })
 
 }
 
