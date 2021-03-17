@@ -10,7 +10,9 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
-//? Park Selector
+import { getWeather, useWeather } from "./weather/WeatherProvider.js";
+
+//? Park Selector and Preview Print
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
     let parkSelection = useParks();
@@ -21,7 +23,7 @@ parkElement.addEventListener("change", (event) => {
     }
 })
 
-//? Attraction Selector
+//? Attraction Selector and Preview Print
 const attractionElement = document.querySelector("#attractionSelect");
 attractionElement.addEventListener("change", (event) => {
     let attractionSelection = useAttractions();
@@ -32,7 +34,7 @@ attractionElement.addEventListener("change", (event) => {
     }
 })
 
-//? Eatery Selector
+//? Eatery Selector and Preview Print
 // Sets an element equal to the eaterySelect ID on the DOM.
 const eateryElement = document.querySelector("#eaterySelect");
 // An event listen that listens for a dropdown selection, then...
@@ -47,6 +49,13 @@ eateryElement.addEventListener("change", (event) => {
             // Feeds entire object through the display eatery function.
             displayEatery(anEatery);
         }
+    }
+})
+
+const eateryDetailsElement = document.querySelector(".eateryCard");
+eateryDetailsElement.addEventListener("click", (event) => {
+    if (event.target.id === "eateryDetails") {
+        alert(`${eateryObj.businessName}`)
     }
 })
 
