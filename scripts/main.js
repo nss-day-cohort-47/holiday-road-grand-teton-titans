@@ -10,8 +10,8 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
-import { getWeather } from "./weather/WeatherProvider.js"
-import { displayWeather } from "./weather/displayWeather.js";
+import { getWeather, useWeather } from "./weather/WeatherProvider.js"
+import { displayWeather, weatherLoop } from "./weather/displayWeather.js";
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
@@ -94,12 +94,6 @@ const startItinerary = () => {
         .then(parksArray => {
             parkList(parksArray.data);
         })
-
-    // getWeather()
-    //     .then(weatherArray => {
-    //         weatherList(weatherArray)
-    //     })
-
 }
 
 startItinerary();
