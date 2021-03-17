@@ -10,7 +10,7 @@ import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
 import { itineraryList } from "./itinerary/ItineraryList.js";
-import { createItinerary, getItinerary } from "./data/DataManager.js";
+import { createItinerary } from "./data/DataManager.js";
 
 // Set Application For Event Bubbling
 const applicationElement = document.querySelector("body");
@@ -101,7 +101,7 @@ const startItinerary = () => {
         })
     
     itineraryList();
-    
+
     saveItinerary();
 }
 
