@@ -10,3 +10,9 @@ export const displayPark = (parkObj) => {
     
     contentElement.innerHTML = parkDisplay;
 }
+
+
+// ! showDetails() will show alert box (for details) when created
+// export const showDetails = (allDetails) => {
+
+// }

@@ -50,6 +50,28 @@ eateryElement.addEventListener("change", (event) => {
     }
 })
 
+
+// when 'details' button is clicked execute showDetails function
+const parkDetailElement = document.querySelector(".parkCard");
+parkDetailElement.addEventListener("click", (event) => {
+    if (event.target.id === "parkDetails") {
+        console.log(event.target.id);
+        showDetails()
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 //? Drop Down Population
 const startItinerary = () => {
 
