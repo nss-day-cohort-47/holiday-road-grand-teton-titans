@@ -10,6 +10,16 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
+// Set Application For Event Bubbling
+const applicationElement = document.querySelector("body");
+
+// Event Listener To Test Capture of All Previewed Locations
+const testClick = () => {
+    applicationElement.addEventListener("click", event = {
+        if (event.target.id === "itineraryPreview")
+    })
+}
+
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
