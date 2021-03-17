@@ -1,6 +1,5 @@
 import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { attractionList, bizarreList } from "./attractions/AttractionList.js";
-// import { displayAttraction } from "./attractions/AttractionPreview.js";
 
 import { getEateries, useEateries } from "./eateries/EateryProvider.js";
 import { eateryList } from "./eateries/EateryList.js";
@@ -8,7 +7,47 @@ import { displayEatery } from "./eateries/EateryPreview.js";
 
 import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
-import { displayPark } from "./parks/ParkPreview.js"
+import { displayPark, showParkDetails } from "./parks/ParkPreview.js"
+
+import { itineraryList } from "./itinerary/ItineraryList.js";
+import { createItinerary } from "./data/DataManager.js";
+
+// Set Application For Event Bubbling
+const applicationElement = document.querySelector("body");
+
+// Event Listener To Test Capture of All Previewed Locations
+const saveItinerary = () => {
+    applicationElement.addEventListener("click", event => {
+        if (event.target.id === "saveItinerary") {
+            
+            // If statement for data validation purpose.
+            if (document.getElementById("attractionName") != null || document.getElementById("eateryName") != null || document.getElementById("parkName") != null) {
+            // A list of input variables to be created and assigned.
+            const attractionPreviewName = document.getElementById("attractionName").innerHTML;
+            const attractionPreviewLocation = document.getElementById("attractionLocation").innerHTML;
+            const eateryPreviewName = document.getElementById("eateryName").innerHTML;
+            const eateryPreviewLocation = document.getElementById("eateryLocation").innerHTML;
+            const parkPreviewName = document.getElementById("parkName").innerHTML;
+            const parkPreviewLocation = document.getElementById("parkLocation").innerHTML;
+
+            // Make an object with variables.
+            const itineraryObject = {
+                attractionPreviewName: attractionPreviewName,
+                attractionPreviewLocation: attractionPreviewLocation,
+                eateryPreviewName: eateryPreviewName,
+                eateryPreviewLocation: eateryPreviewLocation,
+                parkPreviewName: parkPreviewName,
+                parkPreviewLocation: parkPreviewLocation
+            };
+            
+            createItinerary(itineraryObject);
+            } else {
+                console.log("Nope.");
+            }
+        }
+    })
+}
+
 
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
@@ -17,9 +56,12 @@ parkElement.addEventListener("change", (event) => {
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
             displayPark(aPark)
+      
         }
     }
 })
+
+
 
 //? Attraction Selector
 const attractionElement = document.querySelector("#attractionSelect");
@@ -37,7 +79,6 @@ attractionElement.addEventListener("change", (event) => {
 const eateryElement = document.querySelector("#eaterySelect");
 // An event listen that listens for a dropdown selection, then...
 eateryElement.addEventListener("change", (event) => {
-    debugger
     // Assigns the array from the use function to a variable.
     let eaterySelection = useEateries();
     // Loops through the array variable in order to...
@@ -55,11 +96,15 @@ eateryElement.addEventListener("change", (event) => {
 const parkDetailElement = document.querySelector(".parkCard");
 parkDetailElement.addEventListener("click", (event) => {
     if (event.target.id === "parkDetails") {
-        console.log(event.target.id);
-        showDetails()
+      let parkListArray = useParks();
+      for (let aPark of parkListArray) {
+          if (aPark.parkCode === event.target.value) {
+            showParkDetails(aPark) 
+          }
+      }
+  
     }
 })
-
 
 
 
@@ -90,6 +135,9 @@ const startItinerary = () => {
             parkList(parksArray.data);
         })
 
+    itineraryList();
+
+    saveItinerary();
 }
 
 startItinerary();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* The hero image */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
@@ -131,4 +132,8 @@ html {
     padding: 30px 30px 10px 30px;
     margin-top: -50px;
     justify-content: space-around;
+=======
+aside {
+    border: dodgerblue dotted;
+>>>>>>> main
 }
