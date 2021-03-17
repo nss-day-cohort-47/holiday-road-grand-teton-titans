@@ -10,6 +10,8 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
+import { getWeather } from "./weather/WeatherProvider.js"
+
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
@@ -17,6 +19,7 @@ parkElement.addEventListener("change", (event) => {
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
             displayPark(aPark)
+            getWeather(aPark.latitude, aPark.longitude);
         }
     }
 })
