@@ -1,5 +1,6 @@
-import { getAttractions } from "./attractions/AttractionProvider.js";
+import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { attractionList, bizarreList } from "./attractions/AttractionList.js";
+// import { displayAttraction } from "./attractions/AttractionPreview.js";
 
 import { getEateries, useEateries } from "./eateries/EateryProvider.js";
 import { eateryList } from "./eateries/EateryList.js";
@@ -9,25 +10,34 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
+//? Park Selector
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
     let parkSelection = useParks();
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
-            displayPark(aPark);
+            displayPark(aPark)
         }
     }
 })
 
+//? Attraction Selector
 const attractionElement = document.querySelector("#attractionSelect");
 attractionElement.addEventListener("change", (event) => {
-    console.log(event.target.value);
+    let attractionSelection = useAttractions();
+    for (let anAttraction of attractionSelection) {
+        if (anAttraction.name === event.target.value) {
+            bizarreList(anAttraction);
+        }
+    }
 })
 
+//? Eatery Selector
 // Sets an element equal to the eaterySelect ID on the DOM.
 const eateryElement = document.querySelector("#eaterySelect");
 // An event listen that listens for a dropdown selection, then...
 eateryElement.addEventListener("change", (event) => {
+    debugger
     // Assigns the array from the use function to a variable.
     let eaterySelection = useEateries();
     // Loops through the array variable in order to...
@@ -62,6 +72,7 @@ parkDetailElement.addEventListener("click", (event) => {
 
 
 
+//? Drop Down Population
 const startItinerary = () => {
 
     getAttractions()

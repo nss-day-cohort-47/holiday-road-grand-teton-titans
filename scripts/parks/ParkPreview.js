@@ -3,7 +3,7 @@ export const displayPark = (parkObj) => {
 
     let parkDisplay =  `
                             <h2>${parkObj.fullName}</h2>
-                            <p>${parkObj.city}, ${parkObj.states}</p><br>
+                            <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <button id="parkDetails">Details</button>
                            
                         `;
@@ -12,7 +12,7 @@ export const displayPark = (parkObj) => {
 }
 
 
-// ! showDetails() will show alert box (for details)
+// ! showDetails() will show alert box (for details) when created
 // export const showDetails = (allDetails) => {
 
 // }

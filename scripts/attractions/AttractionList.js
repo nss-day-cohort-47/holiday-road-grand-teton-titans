@@ -1,5 +1,5 @@
 import { AttractionDropDownHTML } from "./AttractionDropDown.js";
-import { attractionRepresentation} from "./AttractionPreview.js";
+import { displayAttraction} from "./AttractionPreview.js";
 
 export const attractionList = (attractionArray) => {
     const navElement = document.getElementById("attractionSelect");
@@ -15,6 +15,6 @@ export const attractionList = (attractionArray) => {
 
 export const bizarreList = (object) => {
    const contentTarget = document.querySelector(".attractionCard")
-    let attractionDisplay = attractionRepresentation(object)
+    let attractionDisplay = displayAttraction(object)
     contentTarget.innerHTML = attractionDisplay
 }
