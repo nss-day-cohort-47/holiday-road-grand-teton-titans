@@ -8,7 +8,7 @@ import { displayEatery } from "./eateries/EateryPreview.js";
 
 import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
-import { displayPark } from "./parks/ParkPreview.js"
+import { displayPark, showDetails } from "./parks/ParkPreview.js"
 
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
@@ -17,9 +17,18 @@ parkElement.addEventListener("change", (event) => {
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
             displayPark(aPark)
+      
         }
     }
 })
+
+// const parkDetailElement = document.querySelector(".parkCard");
+// parkDetailElement.addEventListener("click", (event) => {
+//     alert 
+//     ()
+// })
+
+
 
 //? Attraction Selector
 const attractionElement = document.querySelector("#attractionSelect");
@@ -59,7 +68,6 @@ parkDetailElement.addEventListener("click", (event) => {
         showDetails()
     }
 })
-
 
 
 

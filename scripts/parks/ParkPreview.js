@@ -13,6 +13,11 @@ export const displayPark = (parkObj) => {
 
 
 // ! showDetails() will show alert box (for details) when created
-// export const showDetails = (allDetails) => {
+export const showDetails = () => {
+   
+        alert
+        ("I am an alert box")
 
-// }
+
+}
+
