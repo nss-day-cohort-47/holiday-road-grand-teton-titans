@@ -8,14 +8,17 @@
     <title>Holiday Road</title>
 </head>
 <body>
-    <img class="logo" src="images/Itinerary.JPG" alt="Beyond Itinerary">
-    <div class="navbar">   
-        <section class ="dropdown">
-    <nav>
-        <div class="hero-image">
-            <img class ="hero-image" src="images/backpacker.jpeg">
-        </div>
+    <header>
+        <img class="logo" src="images/Itinerary.JPG" alt="Beyond Itinerary">
+    </header>
 
+    <div class="navbar">   
+        <nav>
+            <div class="hero-image">
+                <img class ="hero-image" src="images/backpacker.jpeg">
+            </div>
+            
+            <section class ="dropdown">
         <div> <!--Div placed here for possible class needed for navbar css styling-->
             <label for="parkSelect">Select a National Park</label><br>
             <select name="parkSelect" id="parkSelect">
@@ -37,11 +40,11 @@
             </select>
         </div>
 
+    </section>
     </nav>
-</section>
 </div>
     <main>
-        <div>
+        <div class="previewSection">
 
             <h1>Itinerary preview</h2>
             <!-- ! INSERT CARDS DOM PRINTER -->
@@ -54,6 +57,7 @@
 
     <footer>
         <!-- ! FOOTER -->
+        &copy;
     </footer>
   <script type="module" src="/scripts/main.js"></script>    
 </body>
