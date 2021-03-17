@@ -4,7 +4,7 @@ export const displayPark = (parkObj) => {
     let parkDisplay =  `
                             <h2>${parkObj.fullName}</h2>
                             <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
-                            <button id="parkDetails">Details</button>
+                            <button id="parkDetails" value="${parkObj.parkCode}">Details</button>
                            
                         `;
     
@@ -13,10 +13,17 @@ export const displayPark = (parkObj) => {
 
 
 // ! showDetails() will show alert box (for details) when created
-export const showDetails = () => {
+export const showParkDetails = (parkObj) => {
    
         alert
-        ("I am an alert box")
+        (`  ${parkObj.fullName} \r\n 
+            ${parkObj.url} \r\n
+            ${parkObj.description} \r\n
+            Best Content Creation Activities:
+            ${parkObj.activities[0].name}
+            ${parkObj.activities[1].name}
+            ${parkObj.activities[2].name}
+        `)
 
 
 }
