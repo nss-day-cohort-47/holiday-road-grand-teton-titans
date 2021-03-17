@@ -15,9 +15,6 @@ export const itineraryList = () => {
             allItineraries.forEach(singleItinerary => {
                 itineraryHTMLRepresentation += itineraryEntryComponent(singleItinerary);
             })
-
-            console.log("Itinerary 1", itineraryHTMLRepresentation);
             itineraryElement.innerHTML = itineraryHTMLRepresentation;
-            console.log(itineraryElement.innerHTML);
         })
 }

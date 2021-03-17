@@ -19,6 +19,9 @@ const applicationElement = document.querySelector("body");
 const saveItinerary = () => {
     applicationElement.addEventListener("click", event => {
         if (event.target.id === "saveItinerary") {
+            
+            // If statement for data validation purpose.
+            if (document.getElementById("attractionName") != null || document.getElementById("eateryName") != null || document.getElementById("parkName") != null) {
             // A list of input variables to be created and assigned.
             const attractionPreviewName = document.getElementById("attractionName").innerHTML;
             const attractionPreviewLocation = document.getElementById("attractionLocation").innerHTML;
@@ -29,15 +32,18 @@ const saveItinerary = () => {
 
             // Make an object with variables.
             const itineraryObject = {
-                attractionPreviewName : attractionPreviewName,
-                attractionPreviewLocation : attractionPreviewLocation,
-                eateryPreviewName : eateryPreviewName,
-                eateryPreviewLocation : eateryPreviewLocation,
-                parkPreviewName : parkPreviewName,
-                parkPreviewLocation : parkPreviewLocation
+                attractionPreviewName: attractionPreviewName,
+                attractionPreviewLocation: attractionPreviewLocation,
+                eateryPreviewName: eateryPreviewName,
+                eateryPreviewLocation: eateryPreviewLocation,
+                parkPreviewName: parkPreviewName,
+                parkPreviewLocation: parkPreviewLocation
             };
-
+            
             createItinerary(itineraryObject);
+            } else {
+                console.log("Nope.");
+            }
         }
     })
 }
@@ -99,7 +105,7 @@ const startItinerary = () => {
         .then(parksArray => {
             parkList(parksArray.data);
         })
-    
+
     itineraryList();
 
     saveItinerary();
