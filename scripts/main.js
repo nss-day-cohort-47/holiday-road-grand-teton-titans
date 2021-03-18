@@ -10,7 +10,7 @@ import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
-import { getWeather } from "./weather/WeatherProvider.js"
+import { parkWeather } from "./weather/WeatherList.js"
 
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
@@ -19,7 +19,7 @@ parkElement.addEventListener("change", (event) => {
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
             displayPark(aPark)
-            getWeather(aPark.latitude, aPark.longitude);
+            parkWeather(aPark)
         }
     }
 })
@@ -53,7 +53,6 @@ eateryElement.addEventListener("change", (event) => {
     }
 })
 
-
 // when 'details' button is clicked execute showDetails function
 const parkDetailElement = document.querySelector(".parkCard");
 parkDetailElement.addEventListener("click", (event) => {
@@ -63,18 +62,16 @@ parkDetailElement.addEventListener("click", (event) => {
     }
 })
 
+/*~~~~~~~~~~~~~~~Test Code~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// const contentElement = document.querySelector("body");
+// contentElement.addEventListener("click", event => {
+//     if (event.target.id === "")
+//     console.log(event.target.id)
+// })
 
-
-
-
-
-
-
-
-
-
-
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 //? Drop Down Population
 const startItinerary = () => {
 
