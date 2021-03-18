@@ -1,6 +1,7 @@
+  
 export const displayPark = (parkObj) => {
     const contentElement = document.querySelector(".parkCard")
-
+                    `
 
                             <h2>${parkObj.fullName}</h2>
                             <p> Location: ${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
@@ -19,9 +20,7 @@ export const showParkDetails = (parkObj) => {
         alert
         (`  ${parkObj.fullName} \r\n 
             ${parkObj.description} \r\n
-
             Best Spots for Content Creation:
-
             ${parkObj.activities[0].name}
             ${parkObj.activities[1].name}
             ${parkObj.activities[2].name}
