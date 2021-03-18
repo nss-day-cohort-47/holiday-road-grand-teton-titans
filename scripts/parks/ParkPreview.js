@@ -6,8 +6,8 @@ export const displayPark = (parkObj) => {
                             <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <latitude id="parkLat" value="${parkObj.latitude}"></latitude>
                             <longitude id="parkLng" value="${parkObj.longitude}"></longitude>
-                            <div id="parkForcast"></div>
                             <button id="parkDetails">Details</button>
+                            <div id="parkForecast"></div>
                         `;
     
     contentElement.innerHTML = parkDisplay;

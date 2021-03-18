@@ -8,7 +8,7 @@ export const useWeather = () => {
 
 export const getWeather = (lat, lng) => {
     // Dummy values right now.
-    return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${settings.weatherKey}`)
+    return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${settings.weatherKey}&units=imperial`)
         .then(response => response.json())
         .then(parsedResponse => {
             parsedWeather = parsedResponse.list;

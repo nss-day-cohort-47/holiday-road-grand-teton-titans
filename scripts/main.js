@@ -11,6 +11,7 @@ import { parkList } from "./parks/ParkList.js";
 import { displayPark } from "./parks/ParkPreview.js"
 
 import { parkWeather } from "./weather/WeatherList.js"
+// import { displayWeather } from "./weather/WeatherPreview.js"
 
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
@@ -18,6 +19,7 @@ parkElement.addEventListener("change", (event) => {
     let parkSelection = useParks();
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
+            debugger
             displayPark(aPark)
             parkWeather(aPark)
         }

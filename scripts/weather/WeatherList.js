@@ -1,10 +1,12 @@
 import { getWeather } from "./WeatherProvider.js";
+import { displayWeather } from "./WeatherPreview.js"
 
 export const parkWeather = (parkObj) => {
     let parkCord = getLocation(parkObj);
     getWeather(parkCord[0], parkCord[1])
         .then(response => {
-            console.log(response);
+            // console.log(response);
+            displayWeather(response)
         })
 }
 
