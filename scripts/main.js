@@ -3,7 +3,7 @@ import { attractionList, bizarreList } from "./attractions/AttractionList.js";
 
 import { getEateries, useEateries } from "./eateries/EateryProvider.js";
 import { eateryList } from "./eateries/EateryList.js";
-import { displayEatery } from "./eateries/EateryPreview.js";
+import { displayEatery, showEateryDetails } from "./eateries/EateryPreview.js";
 
 import { getParks, useParks } from "./parks/ParkProvider.js";
 import { parkList } from "./parks/ParkList.js";
@@ -92,7 +92,7 @@ eateryElement.addEventListener("change", (event) => {
 })
 
 
-// when 'details' button is clicked execute showDetails function
+// when 'details' button is clicked, execute showDetails function
 const parkDetailElement = document.querySelector(".parkCard");
 parkDetailElement.addEventListener("click", (event) => {
     if (event.target.id === "parkDetails") {
@@ -103,6 +103,20 @@ parkDetailElement.addEventListener("click", (event) => {
           }
       }
   
+    }
+})
+
+const eateryDetailElement = document.querySelector (".eateryCard");
+eateryDetailElement.addEventListener("click", (event) => {
+    if (event.target.id === "eateryDetails") {
+        let eateryListArray = useEateries();
+        for (let anEatery of eateryListArray) {
+         
+            if (anEatery.id === parseInt(event.target.value)) {
+
+                showEateryDetails(anEatery)
+            }
+        }
     }
 })
 
