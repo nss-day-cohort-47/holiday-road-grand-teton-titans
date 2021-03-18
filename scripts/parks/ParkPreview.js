@@ -3,16 +3,9 @@ export const displayPark = (parkObj) => {
 
 
     let parkDisplay =  `
-<<<<<<< HEAD
-                            <h2>${parkObj.fullName}</h2>
-                            <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
-                            <button class="button" id="parkDetails" value="${parkObj.parkCode}">Details</button>
-                           
-=======
                             <h2 id="parkName">${parkObj.fullName}</h2>
                             <p id ="parkLocation">${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <button id="parkDetails" value="${parkObj.parkCode}">Details</button>
->>>>>>> main
                         `;
 
     contentElement.innerHTML = parkDisplay;
