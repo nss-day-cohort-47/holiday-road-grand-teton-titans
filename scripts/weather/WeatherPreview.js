@@ -9,7 +9,7 @@ export const displayWeather = (weatherObj) => {
     //? returns the day of the week
     const firstDayDate = firstFixedDate.toLocaleString("en-US", {weekday: "long"})
     //? returns the hour of the day
-    const firstHourDate = firstFixedDate.toLocaleString("en-US", {hour: "numeric"})
+    
 
     const secondDay = weatherObj[1].dt;//! 
     //? converting epoch date to better work with milliseconds (TIME ACCURACY)
@@ -19,7 +19,7 @@ export const displayWeather = (weatherObj) => {
     //? returns the day of the week
     const secondDayDate = secondFixedDate.toLocaleString("en-US", {weekday: "long"})
     //? returns the hour of the day
-    const secondHourDate = secondFixedDate.toLocaleString("en-US", {hour: "numeric"})
+    
 
     const thirdDay = weatherObj[2].dt;//! 
     //? converting epoch date to better work with milliseconds (TIME ACCURACY)
@@ -29,7 +29,7 @@ export const displayWeather = (weatherObj) => {
     //? returns the day of the week
     const thirdDayDate = thirdFixedDate.toLocaleString("en-US", {weekday: "long"})
     //? returns the hour of the day
-    const thirdHourDate = thirdFixedDate.toLocaleString("en-US", {hour: "numeric"})
+    
 
     const fourthDay = weatherObj[3].dt;//! 
     //? converting epoch date to better work with milliseconds (TIME ACCURACY)
@@ -39,7 +39,7 @@ export const displayWeather = (weatherObj) => {
     //? returns the day of the week
     const fourthDayDate = fourthFixedDate.toLocaleString("en-US", {weekday: "long"})
     //? returns the hour of the day
-    const fourthHourDate = fourthFixedDate.toLocaleString("en-US", {hour: "numeric"})
+    
 
     const fifthDay = weatherObj[4].dt;//! 
     //? converting epoch date to better work with milliseconds (TIME ACCURACY)
@@ -49,35 +49,35 @@ export const displayWeather = (weatherObj) => {
     //? returns the day of the week
     const fifthDayDate = fifthFixedDate.toLocaleString("en-US", {weekday: "long"})
     //? returns the hour of the day
-    const fifthHourDate = fifthFixedDate.toLocaleString("en-US", {hour: "numeric"})
+    
 
     let weatherDisplay =     `
                             <div class="weatherCard">
-                            <h3>${firstDayDate} at ${firstHourDate}</h3>
+                            <h3>${firstDayDate} at 12PM</h3>
                             <h4>${weatherObj[0].weather[0].main}</h4>
                             <p>${weatherObj[0].main.temp}&#176 F</p>
                             <p>${weatherObj[0].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
-                            <h3>${secondDayDate} at ${secondHourDate}</h3>
+                            <h3>${secondDayDate} at 12PM</h3>
                             <h4>${weatherObj[1].weather[0].main}</h4>
                             <p>${weatherObj[1].main.temp}&#176 F</p>
                             <p>${weatherObj[1].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
-                            <h3>${thirdDayDate} at ${thirdHourDate}</h3>
+                            <h3>${thirdDayDate} at 12PM</h3>
                             <h4>${weatherObj[2].weather[0].main}</h4>
                             <p>${weatherObj[2].main.temp}&#176 F</p>
                             <p>${weatherObj[2].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
-                            <h3>${fourthDayDate} at ${fourthHourDate}</h3>
+                            <h3>${fourthDayDate} at 12PM</h3>
                             <h4>${weatherObj[3].weather[0].main}</h4>
                             <p>${weatherObj[3].main.temp}&#176 F</p>
                             <p>${weatherObj[3].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
-                            <h3>${fifthDayDate} at ${fifthHourDate}</h3>
+                            <h3>${fifthDayDate} at 12PM</h3>
                             <h4>${weatherObj[4].weather[0].main}</h4>
                             <p>${weatherObj[4].main.temp}&#176 F</p>
                             <p>${weatherObj[4].weather[0].description}</p>
