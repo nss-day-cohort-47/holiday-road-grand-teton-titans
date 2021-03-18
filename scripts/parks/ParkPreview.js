@@ -2,10 +2,11 @@ export const displayPark = (parkObj) => {
     const contentElement = document.querySelector(".parkCard")
 
 
-    let parkDisplay =  `
-                            <h2 id="parkName">${parkObj.fullName}</h2>
-                            <p id ="parkLocation">${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
-                            <button class="button" id="parkDetails" value="${parkObj.parkCode}">Details</button>
+                            <h2>${parkObj.fullName}</h2>
+                            <p> Location: ${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
+                            <p> <a href="${parkObj.url}">Visit the ${parkObj.fullName} official website!</a> </p><br>
+                            <button id="parkDetails" value="${parkObj.parkCode}">Detail Snapshot</button>
+
                         `;
 
     contentElement.innerHTML = parkDisplay;
@@ -17,7 +18,6 @@ export const showParkDetails = (parkObj) => {
 
         alert
         (`  ${parkObj.fullName} \r\n 
-            ${parkObj.url} \r\n
             ${parkObj.description} \r\n
 
             Best Spots for Content Creation:

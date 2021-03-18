@@ -3,22 +3,24 @@ export const displayEatery = (eateryObj) => {
 
     let eateryDisplay =     `<section id="eaterySection">
                             <h2 id="eateryName">${eateryObj.businessName}</h2>
-                            <p id="eateryLocation">${eateryObj.city}, ${eateryObj.state}</p>
-                            <button class="button" id="eateryDetails" value="${eateryObj.id}">Details</button>
+                            <p id="eateryLocation"> Location: ${eateryObj.city}, ${eateryObj.state}</p>
+                            <button id="eateryDetails" value="${eateryObj.id}">Detail snapshot</button>
+
                             </section>`;
     
     contentElement.innerHTML = eateryDisplay;
 }
 
 
-// showEateryDetails() should be written here 
+// when function is invoked, passes Obj through to display specific details of each object in the array in an alert box
 export const showEateryDetails = (eateryObj) => {
 
     alert (
-        `${eateryObj.businessName} \r\n
+        `${eateryObj.businessName} \r\n 
         ${eateryObj.description} \r\n
-        Wifi: ${eateryObj.ameneties.wifi} \r\n
-        Restrooms: ${eateryObj.ameneties.restrooms}
+        Wifi provided: ${eateryObj.ameneties.wifi} \r\n
+        Restroom available: ${eateryObj.ameneties.restrooms}
         `
     )
 } 
+// \r\n breaks the returned line (works same as <br>)
