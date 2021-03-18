@@ -15,17 +15,16 @@ export const displayPark = (parkObj) => {
 
 // ! showDetails() will show alert box (for details) when created
 export const showParkDetails = (parkObj) => {
-   
+
         alert
         (`  ${parkObj.fullName} \r\n 
             ${parkObj.url} \r\n
             ${parkObj.description} \r\n
-            Best Content Creation Activities:
+
+            Best Spots for Content Creation:
+
             ${parkObj.activities[0].name}
             ${parkObj.activities[1].name}
             ${parkObj.activities[2].name}
         `)
-
-
-}
-
+    }
