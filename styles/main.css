@@ -47,13 +47,14 @@ header {
     padding: 5px 5px 5px 5px;
     height: 100px;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 html {
@@ -66,9 +67,12 @@ html {
 }
 
 .previewSection{
-    border: 2px solid black;
+    border-style: ouset;
     display: flex;
     margin-top: 5px;
+    float: left;
+    box-sizing: border-box;
+ 
 }
    
 .button {
@@ -106,7 +110,22 @@ html {
     filter: opacity(80%);
     border-radius: 10px;
 }
+ .aside {
+     float: right;
+    
+     border-style: outset;
+     overflow: scroll;
+ }
 
+ h1 {
+     color: black;
+     text-align: center;
+
+ }
+
+footer {
+    position: inherit;
+}
 
 /*.attractionCard {
     
@@ -117,12 +136,13 @@ html {
 }
 eateryCard {
     
-}*/
+}
 
-aside {
+.aside {
     box-sizing: border-box;
     float: right;
     border: 2px solid black;
+    object-position: -20% 50%;
 }
 /*.navbar a {
     float: left;
