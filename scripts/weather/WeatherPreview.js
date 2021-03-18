@@ -1,6 +1,5 @@
 export const displayWeather = (weatherObj) => {
     const contentElement = document.getElementById("parkForecast");
-
     const firstday = weatherObj[0].dt;//! 
     //? converting epoch date to better work with milliseconds (TIME ACCURACY)
     const firstADate = firstday * 1000;
