@@ -20,7 +20,7 @@ body {
       width: 100px;
       object-fit: cover;
       border-radius: 200%;
-      border: 10px solid #84703e;
+      border:  solid #84703e;
 }
     
 .dropdown {
@@ -107,14 +107,14 @@ html {
     border-radius: 10px;
 }
 
+
+/*.attractionCard {
+    
+}
+
 .parkCard{
     border: 2px solid black
 }
-
-/*.attractionCard {
- 
-}
-
 eateryCard {
     
 }*/
