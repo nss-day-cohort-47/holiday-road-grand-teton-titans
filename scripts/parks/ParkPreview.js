@@ -4,8 +4,9 @@ export const displayPark = (parkObj) => {
 
     let parkDisplay =  `
                             <h2>${parkObj.fullName}</h2>
-                            <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
-                            <button id="parkDetails" value="${parkObj.parkCode}">Details</button>
+                            <p> Location: ${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
+                            <p> <a href="${parkObj.url}">Visit the ${parkObj.fullName} official website!</a> </p><br>
+                            <button id="parkDetails" value="${parkObj.parkCode}">Detail Snapshot</button>
                            
                         `;
 
@@ -18,7 +19,6 @@ export const showParkDetails = (parkObj) => {
 
         alert
         (`  ${parkObj.fullName} \r\n 
-            ${parkObj.url} \r\n
             ${parkObj.description} \r\n
 
             Best Spots for Content Creation:

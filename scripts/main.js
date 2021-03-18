@@ -1,5 +1,6 @@
 import { getAttractions, useAttractions } from "./attractions/AttractionProvider.js";
 import { attractionList, bizarreList } from "./attractions/AttractionList.js";
+import { showAttractionDetails } from "./attractions/AttractionPreview.js";
 
 import { getEateries, useEateries } from "./eateries/EateryProvider.js";
 import { eateryList } from "./eateries/EateryList.js";
@@ -111,10 +112,22 @@ eateryDetailElement.addEventListener("click", (event) => {
     if (event.target.id === "eateryDetails") {
         let eateryListArray = useEateries();
         for (let anEatery of eateryListArray) {
-         
+        //  Although value is a number, it is presented as a string in EateryPreview.js / parseInt converts it to an integer
             if (anEatery.id === parseInt(event.target.value)) {
 
                 showEateryDetails(anEatery)
+            }
+        }
+    }
+})
+
+const attractionDetailElement = document.querySelector(".attractionCard");
+attractionDetailElement.addEventListener("click", (event) => {
+    if (event.target.id === 'attractionDetails') {
+        let attractionListArray = useAttractions();
+        for (let anAttraction of attractionListArray) {
+            if (anAttraction.id === parseInt(event.target.value)) {
+                showAttractionDetails(anAttraction)
             }
         }
     }
