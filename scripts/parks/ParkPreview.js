@@ -1,18 +1,18 @@
-  
 export const displayPark = (parkObj) => {
     const contentElement = document.querySelector(".parkCard")
-                    `
 
+    let parkDisplay =  `
                             <h2>${parkObj.fullName}</h2>
-                            <p> Location: ${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
+                            <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <p> <a href="${parkObj.url}">Visit the ${parkObj.fullName} official website!</a> </p><br>
-                            <button id="parkDetails" value="${parkObj.parkCode}">Detail Snapshot</button>
-
+                            <latitude id="parkLat" value="${parkObj.latitude}"></latitude>
+                            <longitude id="parkLng" value="${parkObj.longitude}"></longitude>
+                            <button id="parkDetails" value="${parkObj.parkCode}">Details Snapshot</button>
+                            <div id="parkForecast"></div>
                         `;
-
+    
     contentElement.innerHTML = parkDisplay;
 }
-
 
 // ! showDetails() will show alert box (for details) when created
 export const showParkDetails = (parkObj) => {
@@ -26,3 +26,4 @@ export const showParkDetails = (parkObj) => {
             ${parkObj.activities[2].name}
         `)
     }
+

@@ -44,14 +44,20 @@ const saveItinerary = () => {
     })
 }
 
+import { parkWeather } from "./weather/WeatherList.js"
+// import { displayWeather } from "./weather/WeatherPreview.js"
+
 //? Park Selector
 const parkElement = document.querySelector("#parkSelect");
 parkElement.addEventListener("change", (event) => {
     let parkSelection = useParks();
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
+            debugger
             displayPark(aPark)
+            parkWeather(aPark)
             saveCheck();
+
         }
     }
 })
@@ -86,8 +92,8 @@ eateryElement.addEventListener("change", (event) => {
     }
 })
 
-
 // when 'details' button is clicked, execute showDetails function
+
 const parkDetailElement = document.querySelector(".parkCard");
 parkDetailElement.addEventListener("click", (event) => {
     if (event.target.id === "parkDetails") {
@@ -100,6 +106,18 @@ parkDetailElement.addEventListener("click", (event) => {
     }
 })
 
+/*~~~~~~~~~~~~~~~Test Code~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// const contentElement = document.querySelector("body");
+// contentElement.addEventListener("click", event => {
+//     if (event.target.id === "")
+//     console.log(event.target.id)
+// })
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+//? Drop Down Population
 
 // Display Save Button When Three Selections Are Made
 const saveCheck = () => {
@@ -138,9 +156,6 @@ attractionDetailElement.addEventListener("click", (event) => {
         }
     }
 })
-
-
-
 const startItinerary = () => {
 
     getAttractions()
