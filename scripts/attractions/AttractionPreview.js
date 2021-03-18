@@ -4,7 +4,6 @@ export const displayAttraction = (attractionObj) => {
         <h2 id="attractionName">${attractionObj.name}</h2>
         <p id="attractionLocation"> Location: ${attractionObj.city}, ${attractionObj.state}</p>
         <button id="attractionDetails" value="${attractionObj.id}">Detail Snapshot</button>
-
 	    </section>`
 };
 
