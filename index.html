@@ -18,22 +18,22 @@
                 <img class ="hero-image" src="images/backpacker.jpeg">
             </div>
             
-            <section class ="dropdown">
-        <div> <!--Div placed here for possible class needed for navbar css styling-->
+    <section class ="dropdown" id="dropContain">
+        <div class="dropdownSelect"> <!--Div placed here for possible class needed for navbar css styling-->
             <label for="parkSelect">Select a National Park</label><br>
             <select name="parkSelect" id="parkSelect">
                 <!-- ! PARKS OPTION ELEMENTS FROM DOM PRINTER -->
             </select>
         </div>
 
-        <div>
+        <div class="dropdownSelect">
             <label for="attractionSelect">Select an attraction</label><br>
             <select name="attractionSelect" id="attractionSelect">
                 <!-- ! ATTRACTION OPTION ELEMENTS FROM DOM PRINTER -->
             </select>
         </div>
 
-        <div>
+        <div class="dropdownSelect">
             <label for="eaterySelect">Select an Eatery</label><br>
             <select name="eaterySelect" id="eaterySelect">
                 <!-- ! EATERY OPTION ELEMENTS FROM DOM PRINTER -->
@@ -56,8 +56,9 @@
     <aside>
         
     </aside>
+
     <footer>
-        <button id="saveItinerary">Save Itinerary</button>
+        <button class="button" id="saveItinerary">Save Itinerary</button>
         <!-- ! FOOTER -->
         &copy;
     </footer>

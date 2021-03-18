@@ -1,13 +1,8 @@
 /* The hero image */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/heroImage.jpg");
-    
-    /* Set a specific height */
+.hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/backpacker.jpeg");
     width: 99vw;
     height: 45vh;
-  
-    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,19 +11,19 @@
     object-fit: cover;
   }
 
-  body {
+body {
       background: rgb(200, 208, 157);
-  }
+}
   
-  .logo {
+.logo {
       height: 90px;
       width: 100px;
       object-fit: cover;
       border-radius: 200%;
       border: 10px solid #84703e;
-    } 
+}
     
-    .dropdown {
+.dropdown {
         z-index: 999999;
         position: absolute;
         top: 50%;
@@ -38,19 +33,10 @@
         justify-content: space-evenly;
         margin: 0;
         padding: 0
-    }
+}
     
-    .dropdown-content a:hover {
-        background-color: #ddd;
-    }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background: #ae4c1b;
-    text-align: center;
+.dropdownSelect :hover {
+        background-color: #cbb68e;
 }
 
 header {
@@ -84,35 +70,44 @@ html {
     display: flex;
     margin-top: 5px;
 }
-/*.dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+   
+.button {
+        box-shadow:inset 0px 1px 0px 0px #ffffff;
+        background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+        background-color:#ededed;
+        border-radius:6px;
+        border:1px solid #dcdcdc;
+        display:inline-block;
+        cursor:pointer;
+        color:#777777;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #ffffff;
+}
+.button:hover {
+        background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+        background-color:#dfdfdf;
+}
+.button:active {
+        position:relative;
+        top:1px;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+#dropContain {
+    display: flex;
+    padding: 2em 1em 2em 2em;
+    background: rgba(178, 192, 219, 0.8);
+    box-sizing: border-box;
+
 }
 
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}*/
-.navbar a {
+
+/*.navbar a {
     float: left;
     font-size: 16px;
     color: white;
@@ -131,4 +126,4 @@ html {
     padding: 30px 30px 10px 30px;
     margin-top: -50px;
     justify-content: space-around;
-}
+}*/
