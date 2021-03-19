@@ -52,7 +52,6 @@ parkElement.addEventListener("change", (event) => {
     let parkSelection = useParks();
     for (let aPark of parkSelection) {
         if (aPark.fullName === event.target.value) {
-            debugger
             displayPark(aPark)
             parkWeather(aPark)
             saveCheck();
