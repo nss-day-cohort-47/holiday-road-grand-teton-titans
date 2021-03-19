@@ -130,8 +130,52 @@ footer {
 
 #parkForecast {
   display: flex;
+  justify-content: space-around;
 }
-  
+.weatherCard {
+  padding: 10px;
+  margin-right: 15px;
+  text-align: center;
+  /* border:2px solid  #ae4c1b; */
+  /* border-radius: 15px; */
+} 
+.weatherCard h3{
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 0%;
+  background:#ae4c1b;
+  border-top:2px solid  #ae4c1b;
+  border-right:2px solid  #ae4c1b;
+  border-left:2px solid  #ae4c1b;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.weatherCard h4 , p{
+  margin: 0%;
+  margin-top: -5px;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background:#ffffff;
+  border-right:2px solid  #ae4c1b;
+  border-left:2px solid  #ae4c1b;
+}
+.weatherCard img {
+  margin: 0%;
+  padding-bottom: 0%;
+  width: 96.7%;
+  background:#ffffff;
+  border-right:2px solid  #ae4c1b;
+  border-left:2px solid  #ae4c1b;
+}
+.weatherCardBottom {
+  background: #ffffff;
+  border-bottom:2px solid  #ae4c1b;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 a:link {
     color:#ae4c1b;
   }
