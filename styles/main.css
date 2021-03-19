@@ -72,8 +72,7 @@ html {
   margin-top: 5px;
   float: left;
   box-sizing: border-box;
-  
-  margin-left: 100px;
+
 }
 
 .parkCard {
@@ -100,6 +99,11 @@ html {
   margin-bottom: 30px;
   padding: 25px;
 
+}
+
+#eateryLocation {
+  margin: 30px;
+  /* creates margin between city, state and details button.. but centers location? */
 }
  
 .button {
@@ -143,6 +147,7 @@ html {
    border-top-left-radius: 30px;
    border-bottom-left-radius: 30px;
    border-style: outset;
+   padding: 50px;
    overflow: scroll;
 }
 
