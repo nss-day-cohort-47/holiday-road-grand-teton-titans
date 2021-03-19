@@ -6,7 +6,6 @@ export const parkWeather = (parkObj) => {
     getWeather(parkCord[0], parkCord[1])
         .then(response => {
             const filteredWeather = weatherFilter(response);
-            console.log(filteredWeather)
             displayWeather(filteredWeather)
         })
 }
