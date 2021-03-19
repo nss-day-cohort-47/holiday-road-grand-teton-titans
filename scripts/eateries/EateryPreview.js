@@ -4,7 +4,7 @@ export const displayEatery = (eateryObj) => {
     let eateryDisplay =     `<section id="eaterySection">
                             <h2 id="eateryName">${eateryObj.businessName}</h2>
                             <p id="eateryLocation"> Location: ${eateryObj.city}, ${eateryObj.state}</p>
-                            <button id="eateryDetails" value="${eateryObj.id}">Detail snapshot</button>
+                            <button class="button" id="eateryDetails" value="${eateryObj.id}">Detail snapshot</button>
                             </section>`;
     
     contentElement.innerHTML = eateryDisplay;
