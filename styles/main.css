@@ -1,6 +1,6 @@
 /* The hero image */
 .hero-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/backpacker.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     width: 99vw;
     height: 45vh;
     background-position: center;
@@ -127,4 +127,13 @@ footer {
     position: inherit;
 }
 
+a:link {
+    color:#ae4c1b;
+  }
+a:hover {
+    color: #CBB68E;
+  }
+a:visited {
+  color:#84703e;
+}
 

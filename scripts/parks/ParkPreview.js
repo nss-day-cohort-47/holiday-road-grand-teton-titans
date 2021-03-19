@@ -1,14 +1,12 @@
 export const displayPark = (parkObj) => {
     const contentElement = document.querySelector(".parkCard")
-
-
+    let parkDisplay =     `<section id="eaterySection">
                             <h2>${parkObj.fullName}</h2>
                             <p> Location: ${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <p> <a href="${parkObj.url}">Visit the ${parkObj.fullName} official website!</a> </p><br>
                             <button id="parkDetails" value="${parkObj.parkCode}">Detail Snapshot</button>
-
+                            </section>
                         `;
-
     contentElement.innerHTML = parkDisplay;
 }
 
