@@ -2,8 +2,8 @@ export const displayPark = (parkObj) => {
     const contentElement = document.querySelector(".parkCard")
 
     let parkDisplay =  `
-                            <h2>${parkObj.fullName}</h2>
-                            <p>${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
+                            <h2 id="parkName">${parkObj.fullName}</h2>
+                            <p id="parkLocation">${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <p> <a href="${parkObj.url}">Visit the ${parkObj.fullName} official website!</a> </p><br>
                             <latitude id="parkLat" value="${parkObj.latitude}"></latitude>
                             <longitude id="parkLng" value="${parkObj.longitude}"></longitude>

@@ -13,10 +13,9 @@ import { displayPark, showParkDetails } from "./parks/ParkPreview.js"
 import { itineraryList } from "./itinerary/ItineraryList.js";
 import { createItinerary } from "./data/DataManager.js";
 
-import { displaySave } from "./nav/Footer.js";
-
 // Set Application For Event Bubbling
 const applicationElement = document.querySelector("body");
+document.getElementById("saveItinerary").disabled = true;
 
 // Event Listener To Test Capture of All Previewed Locations
 const saveItinerary = () => {
@@ -39,8 +38,8 @@ const saveItinerary = () => {
                 parkPreviewLocation: parkPreviewLocation
             };
             createItinerary(itineraryObject);
+            location.reload();
         }
-
     })
 }
 
@@ -106,17 +105,6 @@ parkDetailElement.addEventListener("click", (event) => {
     }
 })
 
-/*~~~~~~~~~~~~~~~Test Code~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-// const contentElement = document.querySelector("body");
-// contentElement.addEventListener("click", event => {
-//     if (event.target.id === "")
-//     console.log(event.target.id)
-// })
-
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 //? Drop Down Population
 
 // Display Save Button When Three Selections Are Made
@@ -125,7 +113,7 @@ const saveCheck = () => {
     const attractionContainer = document.querySelector(".attractionCard");
     const eateryContainer = document.querySelector(".eateryCard");
     if (!(parkContainer.innerHTML === "" || attractionContainer.innerHTML === "" || eateryContainer.innerHTML === "")) {
-        displaySave();
+        document.getElementById("saveItinerary").disabled = false;
     }
 }
 
@@ -137,7 +125,6 @@ eateryDetailElement.addEventListener("click", (event) => {
         for (let anEatery of eateryListArray) {
         //  Although value is a number, it is presented as a string in EateryPreview.js / parseInt converts it to an integer
             if (anEatery.id === parseInt(event.target.value)) {
-
                 showEateryDetails(anEatery)
             }
         }
