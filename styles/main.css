@@ -1,7 +1,87 @@
-#parkForecast {
+/* The hero image */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 99vw;
+    height: 45vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: brightness(60%);
+    object-fit: cover;
+  }
+
+body {
+      background: rgb(200, 208, 157);
+}
+  
+.logo {
+      height: 90px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: 200%;
+      border:  solid #84703e;
+}
+    
+.dropdown {
+        z-index: 999999;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0
+}
+    
+.dropdownSelect :hover {
+        background-color: #cbb68e;
+}
+
+header {
+    box-sizing: border-box;
+    background: #ae4c1b;
+    text-align: left;
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    height: 100px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*z-index: 1;*/
+}
+
+html {
     display: flex;
+}
 
-aside {
-    border: dodgerblue dotted;
+#eaterySelect, #parkSelect, #attractionSelect {
+    flex-direction: row;
+    justify-items: stretch;
+}
 
+.previewSection {
+    border-style: ouset;
+}
+
+#parkForecast {
+  display: flex;
+}
+  
+a:link {
+    color:#ae4c1b;
+  }
+
+a:hover {
+    color: #CBB68E;
+  }
+
+a:visited {
+  color:#84703e;
 }
