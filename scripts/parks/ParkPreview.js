@@ -4,7 +4,7 @@ export const displayPark = (parkObj) => {
     let parkDisplay =       `<h2 id="parkName">${parkObj.fullName}</h2>
                             <p id="parkLocation">${parkObj.addresses[0].city}, ${parkObj.states}</p><br>
                             <p> <a href="${parkObj.url}">Visit the ${parkObj.fullName} official website!</a> </p><br>
-                            <button id="parkDetails" value="${parkObj.parkCode}">Detail Snapshot</button>
+                            <button class="button" id="parkDetails" value="${parkObj.parkCode}">Detail Snapshot</button>
                             <latitude id="parkLat" value="${parkObj.latitude}"></latitude>
                             <longitude id="parkLng" value="${parkObj.longitude}"></longitude>
                             <div id="parkForecast"></div>
