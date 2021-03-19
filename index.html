@@ -13,53 +13,46 @@
     <header>
         <img class="logo" src="images/beyond.JPG" alt="Beyond Itinerary">
     </header>
-    
     <div class="navbar">   
         <nav>
             <div class="hero-image">
                 <img class ="hero-image" src="images/backpacker.jpeg">
             </div>
-            
-    <section class ="dropdown" id="dropContain">
-        <div class="dropdownSelect"> <!--Div placed here for possible class needed for navbar css styling-->
-            <label for="parkSelect">Select a National Park</label><br>
-            <select name="parkSelect" id="parkSelect">
-                <!-- ! PARKS OPTION ELEMENTS FROM DOM PRINTER -->
-            </select>
-        </div>
-
-        <div class="dropdownSelect">
-            <label for="attractionSelect">Select an attraction</label><br>
-            <select name="attractionSelect" id="attractionSelect">
-                <!-- ! ATTRACTION OPTION ELEMENTS FROM DOM PRINTER -->
-            </select>
-        </div>
-
-        <div class="dropdownSelect">
-            <label for="eaterySelect">Select an Eatery</label><br>
-            <select name="eaterySelect" id="eaterySelect">
-                <!-- ! EATERY OPTION ELEMENTS FROM DOM PRINTER -->
-            </select>
-        </div>
-
-    </section>
-    </nav>
-</div>
+            <section class ="dropdown" id="dropContain">
+                <div class="dropdownSelect"> <!--Div placed here for possible class needed for navbar css styling-->
+                    <label for="parkSelect">Select a National Park</label><br>
+                    <select name="parkSelect" id="parkSelect">
+                        <!-- ! PARKS OPTION ELEMENTS FROM DOM PRINTER -->
+                    </select>
+                </div>
+                <div class="dropdownSelect">
+                    <label for="attractionSelect">Select an attraction</label><br>
+                    <select name="attractionSelect" id="attractionSelect">
+                        <!-- ! ATTRACTION OPTION ELEMENTS FROM DOM PRINTER -->
+                    </select>
+                </div>
+                <div class="dropdownSelect">
+                    <label for="eaterySelect">Select an Eatery</label><br>
+                    <select name="eaterySelect" id="eaterySelect">
+                        <!-- ! EATERY OPTION ELEMENTS FROM DOM PRINTER -->
+                    </select>
+                </div>
+            </section>
+        </nav>
+    </div>
     <main class= "previewSection">
         <div id="itineraryPreview">
             <h2>Itinerary Preview</h2>
             <!-- ! INSERT CARDS DOM PRINTER -->
             <div class="parkCard"></div>
-
             <div class="attractionCard"></div>
             <div class="eateryCard"></div>
 
         </div>
     </main>
     <aside class="aside">
-        <h3>Your Trip awaits  </h3>
+        <h3>Your Trip awaits</h3>
     </aside>
-
     <footer>
         <button class="button" id="saveItinerary">Save Itinerary</button>
     </footer>
