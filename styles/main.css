@@ -132,13 +132,16 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
 .weatherCard {
   padding: 10px;
   margin-right: 15px;
   text-align: center;
   /* border:2px solid  #ae4c1b; */
   /* border-radius: 15px; */
+
 } 
+
 .weatherCard h3{
   color: #ffffff;
   padding: 10px;
@@ -150,7 +153,8 @@ footer {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.weatherCard h4 , p{
+
+.weatherCard h4, p {
   margin: 0%;
   margin-top: -5px;
   padding-top: 0%;
@@ -161,6 +165,7 @@ footer {
   border-right:2px solid  #ae4c1b;
   border-left:2px solid  #ae4c1b;
 }
+
 .weatherCard img {
   margin: 0%;
   padding-bottom: 0%;
@@ -169,6 +174,7 @@ footer {
   border-right:2px solid  #ae4c1b;
   border-left:2px solid  #ae4c1b;
 }
+
 .weatherCardBottom {
   background: #ffffff;
   border-bottom:2px solid  #ae4c1b;
@@ -186,4 +192,12 @@ a:hover {
 
 a:visited {
   color:#84703e;
+}
+
+#attractionSection h2, p {
+  background-color:  rgb(200, 208, 157);
+}
+
+.forecastCardTemp {
+  background-color: #ffffff;
 }
