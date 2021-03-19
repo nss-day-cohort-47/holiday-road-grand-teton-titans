@@ -12,6 +12,7 @@
 
 body {
     background: rgb(200, 208, 157);
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .logo {
@@ -137,7 +138,7 @@ a:link {
   }
 
 a:hover {
-    color: #CBB68E;
+    color: #4D7A5C;
   }
 
 a:visited {

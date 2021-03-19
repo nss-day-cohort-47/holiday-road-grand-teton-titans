@@ -20,7 +20,7 @@ const getLocation = (parkObj) => {
 const weatherFilter = (weatherArray) => {
     let filteredWeatherArray = [];
     weatherArray.forEach(weatherObj => {
-        if (weatherObj.dt_txt.includes('12:00:00')){
+        if (weatherObj.dt_txt.includes('6:00:00')){
             filteredWeatherArray.push(weatherObj);
         }
     });
