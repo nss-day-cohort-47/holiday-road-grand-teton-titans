@@ -54,35 +54,35 @@ export const displayWeather = (weatherObj) => {
                             <div class="weatherCard">
                             <h3 class="forecastTitle">${firstDayDate}'s<br/>"Golden Hour"</h3>
                             <img class="forecastIcon" src="http://openweathermap.org/img/w/${weatherObj[0].weather[0].icon}.png"/>
-                            <h4>${weatherObj[0].weather[0].main}</h4>
+                            <h4 class="forecastWeather">${weatherObj[0].weather[0].main}</h4>
                             <p class="forecastCardTemp">${weatherObj[0].main.temp}&#176 F</p>
                             <p class ="weatherCardBottom">${weatherObj[0].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
                             <h3 class="forecastTitle">${secondDayDate}'s<br/>"Golden Hour"</h3>
                             <img class="forecastIcon" src="http://openweathermap.org/img/w/${weatherObj[1].weather[0].icon}.png"/>
-                            <h4>${weatherObj[1].weather[0].main}</h4>
+                            <h4 class="forecastWeather">${weatherObj[1].weather[0].main}</h4>
                             <p class="forecastCardTemp">${weatherObj[1].main.temp}&#176 F</p>
                             <p class ="weatherCardBottom">${weatherObj[1].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
                             <h3 class="forecastTitle">${thirdDayDate}'s<br/>"Golden Hour"</h3>
                             <img class="forecastIcon" src="http://openweathermap.org/img/w/${weatherObj[2].weather[0].icon}.png"/>
-                            <h4>${weatherObj[2].weather[0].main}</h4>
+                            <h4 class="forecastWeather">${weatherObj[2].weather[0].main}</h4>
                             <p class="forecastCardTemp">${weatherObj[2].main.temp}&#176 F</p>
                             <p class ="weatherCardBottom">${weatherObj[2].weather[0].description}</p>
                             </div >
                             <div class="weatherCard">
                             <h3 class="forecastTitle">${fourthDayDate}'s<br/>"Golden Hour"</h3>
                             <img class="forecastIcon" src="http://openweathermap.org/img/w/${weatherObj[3].weather[0].icon}.png"/>
-                            <h4>${weatherObj[3].weather[0].main}</h4>
+                            <h4 class="forecastWeather">${weatherObj[3].weather[0].main}</h4>
                             <p class="forecastCardTemp">${weatherObj[3].main.temp}&#176 F</p>
                             <p class ="weatherCardBottom">${weatherObj[3].weather[0].description}</p>
                             </div>
                             <div class="weatherCard">
                             <h3 class="forecastTitle">${fifthDayDate}'s<br/>"Golden Hour"</h3>
                             <img class="forecastIcon" src="http://openweathermap.org/img/w/${weatherObj[4].weather[0].icon}.png"/>
-                            <h4>${weatherObj[4].weather[0].main}</h4>
+                            <h4 class="forecastWeather">${weatherObj[4].weather[0].main}</h4>
                             <p class="forecastCardTemp">${weatherObj[4].main.temp}&#176 F</p>
                             <p class ="weatherCardBottom">${weatherObj[4].weather[0].description}</p>
                             </div>
