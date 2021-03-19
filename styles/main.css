@@ -11,7 +11,7 @@
 }
 
 body {
-    background: rgb(200, 208, 157);
+    background: #F2F1ED;
     font-family: 'Fjalla One', sans-serif;
 }
 
@@ -72,6 +72,33 @@ html {
   margin-top: 5px;
   float: left;
   box-sizing: border-box;
+  
+  margin-left: 100px;
+}
+
+.parkCard {
+  border-radius: 30px;
+  background-color:  rgb(200, 208, 157);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+.attractionCard {
+  border-radius: 30px;
+  background-color:  rgb(200, 208, 157);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+
+.eateryCard {
+  border-radius: 30px;
+  background-color:  rgb(200, 208, 157);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
 
 }
  
@@ -112,7 +139,9 @@ html {
 }
 .aside {
    float: right;
-  
+   background-color: rgb(200, 208, 157);
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
    border-style: outset;
    overflow: scroll;
 }
