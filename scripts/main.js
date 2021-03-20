@@ -14,7 +14,7 @@ import { itineraryList } from "./itinerary/ItineraryList.js";
 import { createItinerary } from "./data/DataManager.js";
 
 // Set Application For Event Bubbling
-const applicationElement = document.querySelector("body");
+const applicationElement = document.querySelector(".dropdown");
 document.getElementById("saveItinerary").disabled = true;
 
 // Event Listener To Test Capture of All Previewed Locations
