@@ -11,7 +11,8 @@
 }
 
 body {
-    background: rgb(200, 208, 157);
+    background: #F2F1ED;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .logo {
@@ -73,6 +74,37 @@ html {
   box-sizing: border-box;
 
 }
+
+.parkCard {
+  border-radius: 30px;
+  background-color:  rgb(200, 208, 157);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+.attractionCard {
+  border-radius: 30px;
+  background-color:  rgb(200, 208, 157);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+
+.eateryCard {
+  border-radius: 30px;
+  background-color:  rgb(200, 208, 157);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+
+}
+
+#eateryLocation {
+  margin: 30px;
+  /* creates margin between city, state and details button.. but centers location? */
+}
  
 .button {
       box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -111,8 +143,11 @@ html {
 }
 .aside {
    float: right;
-  
+   background-color: rgb(200, 208, 157);
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
    border-style: outset;
+   padding: 50px;
    overflow: scroll;
 }
 
@@ -185,7 +220,7 @@ a:link {
   }
 
 a:hover {
-    color: #CBB68E;
+    color: #4D7A5C;
   }
 
 a:visited {
