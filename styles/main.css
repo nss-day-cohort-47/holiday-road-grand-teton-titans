@@ -17,7 +17,7 @@ body {
 }
 
 .logo {
-    height: 90px;
+    height: 85px;
     width: 100px;
     object-fit: cover;
     border-radius: 200%;
@@ -64,6 +64,8 @@ header {
 header .logo {
   position: relative;
   float: left;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 
 /*html {
@@ -80,8 +82,8 @@ header .logo {
   display: flex;
   margin-top: 5px;
   float: left;
-  box-sizing: border-box;
-
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .parkCard {
@@ -89,7 +91,7 @@ header .logo {
   background-color:  rgb(200, 208, 157);
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 25px;
+  padding: 15px;
 }
 
 .attractionCard {
@@ -97,7 +99,7 @@ header .logo {
   background-color:  rgb(200, 208, 157);
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 25px;
+  padding: 15px;
 }
 
 .eateryCard {
@@ -105,10 +107,10 @@ header .logo {
   background-color:  rgb(200, 208, 157);
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 25px;
+  padding: 15px;
 }
 
-#eateryLocation {
+#eateryLocation, #attractionLocation {
   margin: 30px;
   /* creates margin between city, state and details button.. but centers location? */
 }
@@ -154,16 +156,19 @@ header .logo {
 }
 
 .aside {
-   float: right;
+   /*float: right;*/
    background-color: rgb(200, 208, 157);
    border-top-left-radius: 30px;
    border-bottom-left-radius: 30px;
    border-top-right-radius: 30px;
    border-bottom-right-radius: 30px;
-   position: sticky;
-   border-style: outset;
-   padding: 50px;
+   position: relative;
+   padding: 30px;
    overflow: auto;
+   width: 30%;
+   margin-left: 15px;
+   margin-right: 10px;
+   float:inline-end;
 }
 
 #parkForecast {
@@ -208,13 +213,13 @@ header .logo {
   padding-bottom: 0%;
   width: 96.7%;
   background:#ffffff;
-  border-right:2px solid  #ae4c1b;
-  border-left:2px solid  #ae4c1b;
+  border-right:2px solid #ae4c1b;
+  border-left:2px solid #ae4c1b;
 }
 
 .weatherCardBottom {
   background: #ffffff;
-  border-bottom:2px solid  #ae4c1b;
+  border-bottom:2px solid #ae4c1b;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -225,7 +230,7 @@ a:link {
 
 a:hover {
     color: #4D7A5C;
-  }
+}
 
 a:visited {
   color:#84703e;
@@ -239,3 +244,6 @@ a:visited {
   background-color: #ffffff;
 }
 
+.footer {
+  margin-bottom: 0%;
+}
